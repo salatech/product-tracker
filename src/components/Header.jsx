@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Button, styled, Typography } from "@mui/material";
 import { Link } from 'react-router-dom'
 //img
-
+import Hero from '../assets/HeroShip.jpg'
 
 const Header = () => {
 
@@ -14,7 +14,10 @@ const Header = () => {
         gap: theme.spacing(2),
         paddingTop: theme.spacing(10),
         // cor de fundo
-        backgroundColor: '#755322',
+        boxShadow:'0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.7)',
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundImage: `url(${Hero})`,
         [theme.breakpoints.down('md')]: {
             flexDirection: 'column',
             alignItems: 'center',
@@ -48,7 +51,7 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-                    We'll help you send your packages
+                 Welcome to ShipSmartly Logistics & Tracking Platform! .
                 </Typography>
 
                 <Typography
@@ -60,8 +63,7 @@ const Header = () => {
                     color: '#fff',
                 }}
                 >
-                    We have 9000 more review and our customers
-                    trust on out property and quality products.
+Our mission is to provide secure and efficient shipping solutions for confidential packages across international borders.
                 </Typography>
 
                 <Box>
@@ -105,14 +107,7 @@ const Header = () => {
                 },
             })}
             >
-                <img
-                src="https://img.freepik.com/premium-vector/x9tiny-man-ordering-product-online-via-smartphone-app-phone-order-illustration-fast-delivery-service_566886-1773.jpg?size=626&ext=jpg"
-                alt="headerImg"
-                style={{ 
-                    width: "100%", 
-                    marginBottom: -4,
-                }}
-                />
+            
             </Box>
 
         </CustomBox>

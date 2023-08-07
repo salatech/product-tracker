@@ -9,8 +9,8 @@ import {
 } from '@mui/material'
 import Title from './Title'
 // img
-import imgDetail from '../assets/pexels-alex-staudinger-1732414.jpg';
-import imgDetail2 from '../assets/pexels-pixabay-271816.jpg';
+import About from '../assets/about.jpg'
+import Track from '../assets/track.jpg'
 
 
 const GetStarted = () => {
@@ -30,7 +30,8 @@ const GetStarted = () => {
     })
 
     return (
-            
+        <>
+       
         <Grid container spacing={{ xs: 4, sm: 4, md: 0 }}   
         sx={{
             py: 10,
@@ -38,6 +39,7 @@ const GetStarted = () => {
              
         }}
         >
+         
             <CustomGridItem item xs={12} sm={8} md={6} 
             component = 'section'
            
@@ -49,21 +51,22 @@ const GetStarted = () => {
                 >
                     <Title
                     text={
-                        'We make it easy for buyers to get their product with no stress.'
+                        'we specialize in handling confidential shipments with the utmost discretion and security.'
                     }
                     textAlign={'start'}
                     />
                     <CustomTypography>
-                        Products are delivered safely to preferred<br />
-                        location and the progress of the products<br />
-                        are being tracked.
+                    With years of experience in the logistics industry, 
+                    we have established a reputation for excellence in 
+                    ensuring safe and timely deliveries while maintaining,
+                    the highest level of confidentiality.
                     </CustomTypography> 
                 </Box>
 
             </CustomGridItem>
-            
             <Grid item xs={12} sm={4} md={6}>
-                <img src="https://img.freepik.com/premium-vector/flat-mobile-cargo-tracking-illustration-design_203633-1984.jpg?size=626&ext=jpg&ga=GA1.2.1747187767.1691079709&semt=ais" alt="" 
+
+                <img src={About}
                 style={{
                     width: '100%',
                 }}
@@ -75,18 +78,20 @@ const GetStarted = () => {
                 order: {xs: 4, sm: 4, md: 3}
             }}
             >
-                <img src="https://img.freepik.com/free-vector/male-couriers-delivering-parcels_74855-14101.jpg?size=626&ext=jpg&ga=GA1.2.1747187767.1691079709&semt=ais" alt="" 
+                <img src={Track}
                 style={{ 
                     width: "100%",
                 }}
                 />
             </Grid>
 
+
             <CustomGridItem item xs={12} sm={8} md={6}
             sx={{
                 order: {xs: 3, sm: 3, md: 4}
             }}
             >
+                
                 <Box component='article'
                 sx={{
                     px: 4,
@@ -94,11 +99,14 @@ const GetStarted = () => {
                 >
                     <Title
                     text={
-                        'Put your tracking code below'
+                        'Track a Package'
                         
                     }
                     textAlign={'start'}
                     />
+                     <CustomTypography>
+                     Enter your unique tracking number to get real-time updates on the status and location of your confidential package. Our advanced tracking technology ensures you're always informed about your shipment's journey.
+                    </CustomTypography> 
                     <TextField
                     margin="normal"
                     required
@@ -113,6 +121,7 @@ const GetStarted = () => {
                 </Box>
             </CustomGridItem>
         </Grid>
+        </>
     )
 }
 

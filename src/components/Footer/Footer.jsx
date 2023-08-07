@@ -5,25 +5,20 @@ import {
   styled, 
   Typography,
 } from '@mui/material'
-import Link from '@mui/material/Link';
-import FooterTitle from './FooterTitle'
-import FooterLink from './FooterLink'
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-
 const Footer = () => {
-
   const StackColumn = styled(Stack) (() => ({
     flexDirection: 'column',
     justifyContent: 'flex-start',
-    alignItems: 'center',
+
     flex: 1,
     gap: 8,
-    textAlign: 'center',
+    textAlign: 'left',
+    color: 'black',
   }));
 
   const BoxRow = styled(Box) (({ theme }) => ({
     display: 'flex',
+    justifyContent:'center',
     flexDirection: 'row',
     backgroundColor: '#ededed',
     flex: 1,
@@ -40,42 +35,139 @@ const Footer = () => {
     sx={{
       py: 4,
       px: 2,
+  
     }}
     >
 
       <StackColumn>
-        <Stack 
-        direction='row' 
-        width= '70px'
-        maxWidth='100%'
-        justifyContent='space-between'
+      <Typography 
+        variant='caption'
+        component='p'
+        sx={{
+          fontWeight:'700',
+          
+        
+        }} 
         >
-          <Link href="#" variant="body2" 
-          sx={{
-            color: '#414141',
-            "&:hover": {
-              color: '#1c2859',
-            }
-          }}
-          >
-            <InstagramIcon />  
-          </Link> 
-          <Link href="#"variant="body2" 
-          sx={{
-            color: '#414141',
-            "&:hover": {
-              color: '#1c2859',
-            }
-          }}
-          >
-            <FacebookIcon />
-          </Link> 
-        </Stack>
+        Home
+        </Typography>
         <Typography 
         variant='caption'
         component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
         >
-          &copy; 2023 ShipsSmartly Inc.
+         About us
+        </Typography>
+        <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+        Track
+        </Typography>
+      </StackColumn>
+
+
+      <StackColumn>
+      <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+       Services
+        </Typography>
+        <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+       Pricing
+        </Typography>
+        <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+       How it works
+        </Typography>
+      </StackColumn>
+      <StackColumn>
+      <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+         Contact Us
+        </Typography>
+        <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+        Testimonials
+        </Typography>
+        <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+       Mission
+        </Typography>
+      </StackColumn>
+      <StackColumn>
+      <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+         Vision
+        </Typography>
+        <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+        Media
+        </Typography>
+        <Typography 
+        variant='caption'
+        component='p' 
+        sx={{
+          fontWeight:'700',
+          
+        }} 
+        >
+      Values
         </Typography>
       </StackColumn>
     </BoxRow>

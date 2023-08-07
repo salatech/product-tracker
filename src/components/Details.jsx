@@ -3,10 +3,11 @@ import {
     Box,
     Button,
     Stack,
+    styled,
+    Typography,
     TextField
 } from '@mui/material'
 import Title from './Title'
-import Paragraph from './Paragraph'
 
 const Details = () => {
 
@@ -18,6 +19,13 @@ const Details = () => {
             phone: data.get('phone'),
         });
     }
+    const CustomTypography = styled(Typography) ({
+        fontSize: '1.1rem',
+        textAlign: 'start',
+        lineHeight: '1.5',
+        color: '#515151',
+        marginTop: '1.5rem',
+    })
 
 
     return (
@@ -28,15 +36,21 @@ const Details = () => {
         alignItems='center'
         sx={{
             py: 10,
-            px: 2,
+            px: 2
         }}
         >
             <Title 
             text={
-                'Drop a message for us'
+                'Get in touch'
                 } 
             textAlign={'center'}
             />
+            <CustomTypography>
+        With years of experience in the logistics industry, 
+        we have established a reputation for excellence in 
+        ensuring safe and timely deliveries while maintaining,
+        the highest level of confidentiality.
+        </CustomTypography> 
             <Box 
             component="form" 
             noValidate 
@@ -45,6 +59,7 @@ const Details = () => {
                 mt: 1,
                 py: 2
             }}>
+
                 <TextField
                     margin="normal"
                     required
@@ -64,6 +79,9 @@ const Details = () => {
                     type="phone"
                     id="phone"
                     autoComplete="current-phone"
+                    sx={{
+                        width: "100%",
+                    }}
                 />
                 <Button 
                 variant="contained" 

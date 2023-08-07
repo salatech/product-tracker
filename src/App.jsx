@@ -3,10 +3,11 @@ import React from'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 //pages
 import Home from './pages/Home';
-import Contact from './pages/Contact';
 //componentes
 import Navbar from './components/Navbar';
 import Footer from './components/Footer/Footer';
+import About from './pages/About';
+import Track from './pages/Track';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='' element={<Contact />} />
+          <Route path='/About' element={<About/>} />
+          <Route path ='/Track' element={<Track/>} /> 
         </Routes>
       </BrowserRouter>
       <Footer />

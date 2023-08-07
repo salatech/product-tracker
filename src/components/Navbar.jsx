@@ -36,8 +36,12 @@ const itemList = [
       to: "/" 
     },
     {
+text:"About",
+to: "/About"
+    },
+    {
         text: "Track",
-        to: ""
+        to: "/Track"
     }
 ];
 
@@ -49,7 +53,7 @@ const Navbar = () => {
         component="nav" 
         position="sticky"
         sx={{ 
-            backgroundColor: '#755322',
+            backgroundColor:'#254067',
             boxShadow: '0 .2px #f1f1f1'
         }}
         elevation={0}
