@@ -13,8 +13,7 @@ import {
 // rotas
 import { Link } from 'react-router-dom';
 // icons
-import EmailIcon from '@mui/icons-material/Email';
-import HomeIcon from '@mui/icons-material/Home';
+
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -33,13 +32,15 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const itemList = [
   {
     text: "Home",
-    icon: <HomeIcon />,
     to: "/"
   },
   {
-    text: "Contact",
-    icon: <EmailIcon />,
+    text: "About",
     to: "/contact"
+  },
+  {
+    text: "Track",
+    to: "/Track"
   }
 ];
 

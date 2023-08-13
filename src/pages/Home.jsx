@@ -1,15 +1,28 @@
-import React from 'react'
-import GetStarted from '../components/GetStarted';
+import React,{useLayoutEffect} from 'react'
 import Header from '../components/Header';
-import Services from '../components/Services';
-import Footer from '../components/Footer/Footer';
+import GetStarted from '../components/GetStarted';
+import Carousel from '../components/CarouselPage';
+import GetInTouch from '../components/GetInTouch';
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
+  const { pathname } = useLocation()
+  useLayoutEffect(() => {
+    if (history.scrollRestoration) {
+      history.scrollRestoration = 'manual';
+    }
+    return () => {
+      if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+      }
+    };
+  }, [pathname]);
   return (
     <>
     <Header />
     <GetStarted />
-    <Services />
+    <Carousel/>
+    <GetInTouch />
     </>
 
   )
